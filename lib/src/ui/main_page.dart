@@ -35,11 +35,11 @@ class _MainPageState extends State<MainPage> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.home,
+                  Icons.list_alt_rounded,
                   color: grayColor60,
                 ),
-                activeIcon: const Icon(Icons.home),
-                label: "Beranda"),
+                activeIcon: const Icon(Icons.list_alt_rounded),
+                label: "Liga"),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.person,

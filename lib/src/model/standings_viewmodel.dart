@@ -1,5 +1,5 @@
 class StandingsViewModel {
-  int? id;
+  String? id;
   int? season;
   String? sort;
 
