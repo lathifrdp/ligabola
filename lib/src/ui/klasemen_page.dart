@@ -122,20 +122,23 @@ class _KlasemenPageState extends State<KlasemenPage> {
                             ),
                             Row(
                               children: [
-                                const SizedBox(
-                                  width: 40,
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.09,
                                 ),
                                 Text(
                                   "Club",
                                   style: TextStyle(
                                       fontSize: 12, color: grayColor20),
                                 ),
-                                const SizedBox(
-                                  width: 125,
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.31,
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "GP",
                                     style: TextStyle(
@@ -144,7 +147,8 @@ class _KlasemenPageState extends State<KlasemenPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "W",
                                     style: TextStyle(
@@ -153,7 +157,8 @@ class _KlasemenPageState extends State<KlasemenPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "L",
                                     style: TextStyle(
@@ -162,7 +167,8 @@ class _KlasemenPageState extends State<KlasemenPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "D",
                                     style: TextStyle(
@@ -171,7 +177,8 @@ class _KlasemenPageState extends State<KlasemenPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "GD",
                                     style: TextStyle(
@@ -180,7 +187,8 @@ class _KlasemenPageState extends State<KlasemenPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 28,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.065,
                                   child: Text(
                                     "P",
                                     style: TextStyle(
@@ -229,13 +237,13 @@ class _KlasemenPageState extends State<KlasemenPage> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-          color: whiteColor,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: grayColor30)),
+        color: whiteColor,
+        borderRadius: BorderRadius.circular(8),
+      ),
       child: Row(
         children: [
           SizedBox(
-            width: 155,
+            width: MediaQuery.of(context).size.width * 0.383,
             child: Row(
               children: [
                 Text("$index"),
@@ -243,9 +251,12 @@ class _KlasemenPageState extends State<KlasemenPage> {
                   width: 8,
                 ),
                 e.team!.logos != null
-                    ? Image.network(
-                        "${e.team!.logos![0]!.href}",
-                        scale: 14,
+                    ? SizedBox(
+                        width: 30,
+                        height: 30,
+                        child: Image.network(
+                          "${e.team!.logos![0]!.href}",
+                        ),
                       )
                     : CircleAvatar(
                         backgroundColor: grayColor30,
@@ -263,12 +274,12 @@ class _KlasemenPageState extends State<KlasemenPage> {
               ],
             ),
           ),
-          const SizedBox(
-            width: 20,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.045,
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![3].value}",
               style: TextStyle(fontSize: 12, color: grayColor80),
@@ -276,7 +287,7 @@ class _KlasemenPageState extends State<KlasemenPage> {
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![0].value}",
               style: TextStyle(fontSize: 12, color: grayColor80),
@@ -284,7 +295,7 @@ class _KlasemenPageState extends State<KlasemenPage> {
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![1].value}",
               style: TextStyle(fontSize: 12, color: grayColor80),
@@ -292,7 +303,7 @@ class _KlasemenPageState extends State<KlasemenPage> {
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![2].value}",
               style: TextStyle(fontSize: 12, color: grayColor80),
@@ -300,7 +311,7 @@ class _KlasemenPageState extends State<KlasemenPage> {
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![9].value}",
               style: TextStyle(fontSize: 12, color: grayColor80),
@@ -308,7 +319,7 @@ class _KlasemenPageState extends State<KlasemenPage> {
           ),
           Container(
             alignment: Alignment.center,
-            width: 28,
+            width: MediaQuery.of(context).size.width * 0.065,
             child: Text(
               "${e.stats![6].value}",
               style: TextStyle(
