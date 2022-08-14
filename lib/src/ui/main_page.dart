@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:liga_bola/src/helper/theme_colors.dart';
 import 'package:liga_bola/src/ui/liga_page.dart';
-import 'package:liga_bola/src/ui/profil_page.dart';
+import 'package:liga_bola/src/ui/source_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   final List<Widget> _listPage = [
     const LigaPage(),
-    const ProfilPage(),
+    const SourcePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,11 +42,11 @@ class _MainPageState extends State<MainPage> {
                 label: "Liga"),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person,
+                  Icons.source_rounded,
                   color: grayColor60,
                 ),
-                activeIcon: const Icon(Icons.person),
-                label: "Profil"),
+                activeIcon: const Icon(Icons.source_rounded),
+                label: "Source"),
           ],
           currentIndex: _selectedIndex,
           selectedItemColor: hijauTua,
